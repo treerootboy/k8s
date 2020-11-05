@@ -2,8 +2,8 @@
 
 # LocalVM Start
 ```bash
-sudo curl -sL https://raw.githubusercontent.com/treerootboy/k8s/main/vm.sh -o /usr/local/bin/vmanager
-chmod +x vmanager
+sudo curl -sL https://raw.githubusercontent.com/treerootboy/k8s/main/vmctl -o /usr/local/bin/vmctl
+chmod +x /usr/local/bin/vmctl
 vmanager start
 ```
 
