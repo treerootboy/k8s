@@ -33,7 +33,7 @@ yum install -y docker kubelet kubeadm kubectl --disableexcludes=kubernetes
 
 # modify docker and kubelet cgroup driver to systemd
 sed -i "s/OPTIONS='/OPTIONS='--exec-opt native.cgroupdriver=systemd/" /etc/sysconfig/docker
-NODENAME=printf k8s%02d `hostname -I | cut -f1 -d' ' | cut -f4 -d'.'`
+NODENAME=$(printf k8s%02d `hostname -I | cut -f1 -d' ' | cut -f4 -d'.'`)
 cat <<EOF > /etc/sysconfig/kubelet
 KUBELET_EXTRA_ARGS=--cgroup-driver=systemd --runtime-cgroups=/systemd/system.slice --kubelet-cgroups=/systemd/system.slice --hostname-override=$NODENAME
 EOF
