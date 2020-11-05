@@ -31,10 +31,13 @@ EOF
 
 yum install -y docker kubelet kubeadm kubectl --disableexcludes=kubernetes
 
-systemctl enable --now kubelet
-
 # modify docker and kubelet cgroup driver to systemd
 sed -i "s/OPTIONS='/OPTIONS='--exec-opt native.cgroupdriver=systemd/" /etc/sysconfig/docker
 cat <<EOF > /etc/sysconfig/kubelet
 KUBELET_EXTRA_ARGS=--cgroup-driver=systemd --runtime-cgroups=/systemd/system.slice --kubelet-cgroups=/systemd/system.slice
 EOF
+
+# start docker & kubelet
+systemctl enable --now docker
+systemctl enable --now kubelet
+
