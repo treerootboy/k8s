@@ -1,5 +1,11 @@
 # k8s
 
+# LocalVM Start
+```bash
+curl -sL https://raw.githubusercontent.com/treerootboy/k8s/main/vm.sh -o vmanager
+./vmanager start
+```
+
 # Setup Infrastructure
 ```bash
 # setup faster mirror including system package repo, docker, pip, npm, composer and go
