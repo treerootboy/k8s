@@ -14,6 +14,10 @@ sysctl --system
 setenforce 0
 sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 
+# turn off swap
+swapoff -a # turnoff now
+sed -i "s/\/dev\/mapper\/centos-swap/#\/dev\/mapper\/centos-swap/g" /etc/fstab # turnoff when reboot
+
 # install k8s repo and kubeadm
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
