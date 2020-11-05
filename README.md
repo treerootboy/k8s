@@ -7,4 +7,5 @@ curl -sL https://raw.githubusercontent.com/treerootboy/mirrors/master/install.sh
 
 # setup requirement software and system config
 curl -sL https://raw.githubusercontent.com/treerootboy/k8s/main/setup_infrastructure.sh | bash -
+
 ```
