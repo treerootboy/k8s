@@ -2,8 +2,9 @@
 
 # LocalVM Start
 ```bash
-curl -sL https://raw.githubusercontent.com/treerootboy/k8s/main/vm.sh -o vmanager
-./vmanager start
+sudo curl -sL https://raw.githubusercontent.com/treerootboy/k8s/main/vm.sh -o /usr/local/bin/vmanager
+chmod +x vmanager
+vmanager start
 ```
 
 # Setup Infrastructure
