@@ -1,13 +1,13 @@
 # k8s
 
-# LocalVM Start
+## LocalVM Start
 ```bash
 sudo curl -sL https://raw.githubusercontent.com/treerootboy/k8s/main/vmctl -o /usr/local/bin/vmctl
 chmod +x /usr/local/bin/vmctl
 vmctl start
 ```
 
-# Setup Infrastructure
+## Setup Infrastructure
 ```bash
 # setup faster mirror including system package repo, docker, pip, npm, composer and go
 curl -sL https://raw.githubusercontent.com/treerootboy/mirrors/master/install.sh | bash -
